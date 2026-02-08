@@ -1,4 +1,4 @@
-# CSS Selectors Cheatsheet
+# CSS Cheatsheet
 
 ## Type Selector
 
