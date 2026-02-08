@@ -104,9 +104,15 @@ Points assigned to selectors to resolve conflicts:
 Example:
 
 ```css
-p { color: blue; }       /* 1 point */
-.class p { color: red; } /* 11 points => wins */
-#id p { color: green; }  /* 101 points => wins */
+p {
+  color: blue; /* 1 point */
+}
+.class p {
+  color: red; /* 11 points => wins */
+}
+#id p {
+  color: green; /* 101 points => wins */
+}
 ```
 
 ---
