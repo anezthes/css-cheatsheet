@@ -295,10 +295,10 @@ Controls the main axis direction.
 
 Values:
 
-* row            (default: left to right)
-* row-reverse    (right to left)
-* column         (top to bottom)
-* column-reverse (bottom to top)
+* `row`            (default: left to right)
+* `row-reverse`    (right to left)
+* `column`         (top to bottom)
+* `column-reverse` (bottom to top)
 
 ---
 
@@ -314,12 +314,12 @@ Aligns items along the main axis.
 
 Values:
 
-* start
-* end
-* center
-* space-between
-* space-around
-* space-evenly
+* `start`
+* `end`
+* `center`
+* `space-between`
+* `space-around`
+* `space-evenly`
 
 ---
 
@@ -335,11 +335,11 @@ Aligns items along the cross axis (perpendicular to the main axis).
 
 Values:
 
-* stretch (default)
-* start
-* end
-* center
-* baseline
+* `stretch` (default)
+* `start`
+* `end`
+* `center`
+* `baseline`
 
 ---
 
