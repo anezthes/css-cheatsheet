@@ -136,3 +136,68 @@ Some CSS properties naturally inherit from parent elements:
 * `border`
 * `width` / `height`
 * `background`
+
+# CSS Box Model Cheatsheet
+
+## 1. What is the Box Model?
+
+Every HTML element is a rectangular box. Understanding boxes is essential because everything in CSS involves boxes.
+
+---
+
+## 2. Layers of the Box Model (Inside → Outside)
+
+1. **Content** – Text, image, or whatever is inside the element
+2. **Padding** – Space inside the element, between content and border
+3. **Border** – Edge around the padding (visible or invisible)
+4. **Margin** – Space outside the element, separating it from other elements
+
+---
+
+## 3. Padding vs Margin
+
+* **Padding** – Inside the element. Pushes content away from the border.
+* **Margin** – Outside the element. Pushes other elements away from the box.
+
+Example:
+
+```css
+.box {
+  padding: 16px;           /* space inside */
+  margin: 16px;            /* space outside */
+  border: 2px solid black;
+  background-color: lightblue;
+}
+```
+
+**Visual notes for beginners:**
+
+* Padding increases clickable area (useful for buttons!)
+* Margin does not; it only separates elements
+* Background color covers padding, but not margin
+
+---
+
+## 4. Box Sizing
+
+By default, `width` and `height` do **not** include padding or border:
+
+```css
+div {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+}
+/* Total width = 200 + 20 + 20 + 5 + 5 = 250px */
+```
+
+To make sizing easier, use:
+
+```css
+* {
+  box-sizing: border-box;
+}
+/* Width includes padding and border. Less math, fewer surprises */
+```
+
+Widely recommended for beginners and professionals alike.
