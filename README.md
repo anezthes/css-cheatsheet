@@ -201,3 +201,65 @@ To make sizing easier, use:
 ```
 
 Widely recommended for beginners and professionals alike.
+
+# CSS Overflow Cheatsheet
+
+## 1. What is Overflow?
+
+The `overflow` property controls what happens when content inside a box is larger than the box itself.
+
+---
+
+## 2. Overflow Values
+
+1. **visible** (default)
+
+   * Content spills out of the box
+   * Box does **not** clip the content
+
+```css
+div {
+  overflow: visible;
+}
+```
+
+2. **hidden**
+
+   * Content that exceeds the box is **clipped**
+   * No scrollbars appear
+
+```css
+div {
+  overflow: hidden;
+}
+```
+
+3. **scroll**
+
+   * Always shows **scrollbars** (even if content fits)
+   * Allows scrolling
+
+```css
+div {
+  overflow: scroll;
+}
+```
+
+4. **auto**
+
+   * Scrollbars appear **only if content overflows**
+
+```css
+div {
+  overflow: auto;
+}
+```
+
+---
+
+## 3. Notes for Beginners
+
+* Use `hidden` to **cut off extra content** without scrollbars
+* Use `auto` for **responsive scrolling**
+* If you don't set `overflow`, the default is `visible`, meaning content may spill out of the box
+
