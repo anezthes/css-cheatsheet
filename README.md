@@ -263,3 +263,110 @@ div {
 * Use `auto` for **responsive scrolling**
 * If you don't set `overflow`, the default is `visible`, meaning content may spill out of the box
 
+# CSS Flexbox Cheatsheet
+
+## 1. What is Flexbox?
+
+One-dimensional layout system for arranging items in a row or a column. It is designed for alignment, spacing, and distributing space between items.
+
+---
+
+## 2. display: flex
+
+Turns an element into a flex container. Only direct children are flex items.
+
+```css
+.container {
+  display: flex;
+}
+```
+
+---
+
+## 3. flex-direction
+
+Controls the main axis direction.
+
+```css
+.container {
+  flex-direction: row;
+}
+```
+
+Values:
+
+* row            (default: left to right)
+* row-reverse    (right to left)
+* column         (top to bottom)
+* column-reverse (bottom to top)
+
+---
+
+## 4. justify-content
+
+Aligns items along the main axis.
+
+```css
+.container {
+  justify-content: center;
+}
+```
+
+Values:
+
+* start
+* end
+* center
+* space-between
+* space-around
+* space-evenly
+
+---
+
+## 5. align-items
+
+Aligns items along the cross axis (perpendicular to the main axis).
+
+```css
+.container {
+  align-items: center;
+}
+```
+
+Values:
+
+* stretch (default)
+* start
+* end
+* center
+* baseline
+
+---
+
+## 6. gap
+
+Controls spacing between flex items.
+
+```css
+.container {
+  gap: 16px;
+}
+```
+
+Note:
+
+* `row-gap` and `column-gap` can be used to control spacing independently
+
+---
+
+## 7. Common Flexbox Pattern
+
+Center content horizontally and vertically:
+
+```css
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
