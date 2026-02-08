@@ -1,4 +1,4 @@
-# CSS Cheatsheet
+# CSS Selector Cheatsheet
 
 ## Type Selector
 
@@ -75,3 +75,58 @@ a[href^='https']   /* starts with */
 a[href$='.pdf']    /* ends with */
 a[href*='docs']    /* contains */
 ```
+
+# CSS Cascade & Specificity Cheatsheet
+
+## 1. Cascade
+
+Determines which CSS rules apply when multiple rules target the same element.
+Order of priority:
+
+1. IDs (`#id`)
+2. Classes and attributes (`.class`, `[attr]`)
+3. Element types (`div`, `p`)
+
+Later rules override earlier ones if specificity is equal.
+
+---
+
+## 2. Specificity
+
+Points assigned to selectors to resolve conflicts:
+
+| Selector Type   | Points |
+| --------------- | ------ |
+| ID selector     | 100    |
+| Class/attribute | 10     |
+| Type            | 1      |
+
+Example:
+
+```css
+p { color: blue; }       /* 1 point */
+.class p { color: red; } /* 11 points => wins */
+#id p { color: green; }  /* 101 points => wins */
+```
+
+---
+
+## 3. Inheritance
+
+Some CSS properties naturally inherit from parent elements:
+
+**Inherited by default:**
+
+* `color`
+* `font-family`
+* `font-size`
+* `line-height`
+* `visibility`
+
+**Not inherited by default:**
+
+* `margin`
+* `padding`
+* `border`
+* `width` / `height`
+* `background`
